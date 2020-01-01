@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://mdhrumil:Ashangel28!@devconnector-pql3f.mongodb.net/test?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://mdhrumil:Ashangel28!@devconnector-pql3f.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "dhrumilmehtatoken"
 }
