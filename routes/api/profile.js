@@ -123,7 +123,7 @@ async (req, res) => {
 
     }catch(err){
         console.error(err.message);
-        res.status(500).send('Server error...');
+        //res.status(500).send('Server error...');
     }
     
 });
@@ -172,6 +172,32 @@ router.get('/user/:user_id', async (req, res) => {
             return res.status(400).json({msg: 'No profile found'});
 
         }
+        res.status(500).send("Server error");
+    }
+});
+
+
+// @route DELETE api/profile
+// @description Delete profile, user and posts
+// @access Private
+
+
+router.delete('/', auth, async (req, res) => {
+    try{
+
+        console.log("Will remove profile");
+        // Remove profile
+        await Profile.findOneAndRemove({ user: req.user.id});
+        
+        
+        // Remove user
+        await User.findOneAndRemove({ _id: req.user.id});
+        
+
+        res.json({msg: 'User removed'});
+
+    }catch(err){
+        console.error(err.message);
         res.status(500).send("Server error");
     }
 });
