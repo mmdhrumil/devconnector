@@ -170,7 +170,7 @@ async (req, res) => {
         // Get remove index 
         const removeIndex = post.likes.map(like => like.user.toString()).indexOf(req.user.id);
         post.likes.splice(removeIndex, 1);
-        
+
         await post.save();
         return res.json(post.likes);
 
