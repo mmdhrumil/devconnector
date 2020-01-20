@@ -1,5 +1,5 @@
 {
-    "mongoURI": "mongodb+srv://mdhrumil:YourPasswordhere@devconnector-pql3f.mongodb.net/test?retryWrites=true&w=majority",
+    "mongoURI": "mongodb+srv://mdhrumil:Dhrumil123!@devconnector-pql3f.mongodb.net/test?retryWrites=true&w=majority",
     "jwtSecret": "dhrumilmehtatoken",
     "githubClientID": "e45a6ddef5c00c8a1b4a",
     "githubSecret": "ab0dc68d9ed20d502fe23ff8b764949aea7a5e30"
