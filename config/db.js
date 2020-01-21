@@ -6,7 +6,6 @@ const db = config.get("mongoURI");
 
 const connectDB = async () => {
     try{
-        
         await mongoose.connect(db, 
             {
               useNewUrlParser: true,
@@ -18,7 +17,6 @@ const connectDB = async () => {
     }
     catch(err){
         console.error(err.message);
-
         // Exit the process with failure.
         process.exit(1);
 
